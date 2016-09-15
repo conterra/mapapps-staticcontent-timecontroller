@@ -1,4 +1,4 @@
-# mapapps-staticcontent-timecontroller
+# StaticContent-TimeController Bundle
 
 The StaticContent-TimeController Bundle deactivates the StaticContent widget after a certain period of time.
 
