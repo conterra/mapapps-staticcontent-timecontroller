@@ -1,0 +1,140 @@
+{
+  "properties": {
+    "title": "StaticContent - TimeController Sample"
+  },
+  "load": {
+    "bundleLocations": [
+      "localbundles",
+      "bundles"
+    ],
+    "allowedBundles": [
+      "system",
+      "splashscreen",
+      "map",
+      "themes",
+      "templates",
+      "templatelayout",
+      "windowmanager",
+      "toolset",
+      "toolrules",
+      "basemaptoggler",
+      "contentviewer",
+      "banner",
+      "dn_staticcontenttimecontroller"
+    ],
+    "skipBundles": []
+  },
+  "bundles": {
+    "dn_staticcontenttimecontroller": {
+      "StaticContentTimeController": {
+        "time": 30000
+      }
+    },
+    "banner": {
+      "BannerWidget": {
+        "label": "Developer Network",
+        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "http://developernetwork.conterra.de"
+      }
+    },
+    "templates": {
+      "TemplateSelector": {
+        "componentEnabled": false
+      },
+      "TemplateModel": {
+        "_selectedTemplate": "seasons",
+        "_templates": [
+          {
+            "name": "seasons",
+            "widgets": [
+              {
+                "widgetRole": "printingWidget",
+                "window": {
+                  "marginBox": {
+                    "l": 20,
+                    "b": 50,
+                    "w": 250,
+                    "h": 200
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "contentviewer": {
+      "StaticContent": {
+        "items": [
+          {
+            "title": "Test-Title",
+            "message": "Test-Message",
+            "dndContainerName": "map",
+            "window": {
+              "marginBox": {
+                "w": 400,
+                "h": 180,
+                "b": 70,
+                "l": 20
+              }
+            }
+          }
+        ]
+      },
+      "enabled": true
+    },
+    "map": {
+      "MapState": {
+        "initialExtent": {
+          "xmin": -1100000,
+          "ymin": 4000000,
+          "xmax": 3500000,
+          "ymax": 8800000,
+          "spatialReference": {
+            "wkid": 3857
+          }
+        }
+      },
+      "MapModelFactory": {
+        "_configData": {
+          "maps": [
+            {
+              "id": "default",
+              "glass_pane": [],
+              "operationalLayer": [],
+              "baseLayer": [
+                {
+                  "title": "${service.streets}",
+                  "service": "streets",
+                  "enabled": true
+                },
+                {
+                  "title": "${service.topo}",
+                  "service": "worldTopo",
+                  "enabled": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "MappingResourceRegistryFactory": {
+        "_knownServices": {
+          "services": [
+            {
+              "id": "worldTopo",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
+            },
+            {
+              "id": "streets",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

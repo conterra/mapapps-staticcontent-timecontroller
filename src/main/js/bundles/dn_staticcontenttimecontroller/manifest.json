@@ -1,0 +1,31 @@
+{
+  "Bundle-SymbolicName": "dn_staticcontenttimecontroller",
+  "Bundle-Version": "1.0.0-SNAPSHOT",
+  "Bundle-Name": "${bundleName}",
+  "Bundle-Description": "${bundleDescription}",
+  "Bundle-Vendor": "con terra GmbH",
+  "Product-Name": "con terra Developer Network",
+  "Bundle-Icon": {},
+  "Bundle-License": {},
+  "Require-Bundle": [
+    {
+      "name": "contentviewer"
+    }
+  ],
+  "Components": [
+    {
+      "name": "StaticContentTimeController",
+      "provides": [
+      ],
+      "properties": {
+        "time": 5000
+      },
+      "references": [
+        {
+          "name": "_contentviewer",
+          "providing": "ct.contentviewer.ContentViewer"
+        }
+      ]
+    }
+  ]
+}
