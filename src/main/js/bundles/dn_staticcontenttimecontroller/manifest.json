@@ -9,7 +9,8 @@
   "Bundle-License": {},
   "Require-Bundle": [
     {
-      "name": "contentviewer"
+      "name": "contentviewer",
+      "version": "^3.3.0"
     }
   ],
   "Components": [
