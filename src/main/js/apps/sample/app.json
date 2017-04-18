@@ -28,7 +28,7 @@
   "bundles": {
     "dn_staticcontenttimecontroller": {
       "StaticContentTimeController": {
-        "time": 30000
+        "time": 15000
       }
     },
     "banner": {
@@ -69,8 +69,8 @@
       "StaticContent": {
         "items": [
           {
-            "title": "Test-Title",
-            "message": "Test-Message",
+            "title": "Automatic closing window",
+            "message": "This window will close after 15 seconds.",
             "dndContainerName": "map",
             "window": {
               "marginBox": {
