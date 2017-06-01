@@ -15,10 +15,9 @@
  */
 define([
     "dojo/_base/declare",
-    "dojo/_base/array",
     "dojo/_base/lang",
     "dojo/aspect"
-], function (declare, d_array, d_lang, d_aspect) {
+], function (declare, d_lang, d_aspect) {
     return declare([], {
         activate: function () {
             var properties = this._properties;
@@ -27,7 +26,7 @@ define([
                     if (args[1].predefined) {
                         var time = this.time;
                         setTimeout(function () {
-                            response.window.close()
+                            response.window.close();
                         }, time);
                     }
                     return response;
