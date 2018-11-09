@@ -3,7 +3,7 @@ The StaticContent-TimeController Bundle deactivates the StaticContent widget aft
 
 Sample App
 ------------------
-http://www.mapapps.de/mapapps/resources/apps/downloads_staticcontent_timecontroller/index.html
+https://demos.conterra.de/mapapps/resources/apps/downloads_staticcontent_timecontroller/index.html
 
 Installation Guide
 ------------------
